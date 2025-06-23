@@ -33,8 +33,21 @@ In the configuration of our experiment, this Hamiltonian can be rewritten as:
 
 $$ H_{\text{MgtDD}} = \sum_{<i, j>} (a n^{\uparrow \uparrow}\_{ij} + b(n^{\uparrow \downarrow}\_{ij} + n^{\downarrow \downarrow}\_{ij}) + c n^{\downarrow \downarrow}\_{ij})$$
 
-where  [a, b, c] = [53, 42, 33] Hz
+where  [a, b, c] = [53, 42, 33] Hz.
 
 ## Running the simulations
 
-In order to compute the evolution of a large numbre of atoms
+In order to compute the time evolution of a large number of atoms N, meanfield plus correlations (MPC) simulations can be performed. Indeed, the full resolution of the master equation is quickly impossible, as all the operators scale as $2^N$.
+
+The derivation of the (MPC) is done by the _QuantumCumulants.jl_ library, which derives the symbolic equations for the desired operators thanks to a cumulant expansion method, and automatically closes the set of differential equations.
+
+In order to work with a symbolic number of atoms, we need to use the IndexedOperators objects, which are only implemented for transition and creation/annihilation operators. We thus first rewrite the Hamiltonians with these operators, then derive our set of differential equations, and finally expand the sums with our real number of atoms and convert the parameters into their numerical value. We then save the functions in C files, where each file correspond to one differential equation.
+
+The equations are converted in C for 2 reasons:
+
+- C functions can be compiled in parallel thanks to the Make file
+- When a new Julia session is created, there is no trivial way of loading compiled functions, so the compilation has to be done again. With the C functions, we do not have this issue.
+
+  Once compiled, the C functions are linked to the dispatcher C function, which will call all the subfunctions (or differential equations) in a single call from Julia. Indeed, calling each subfunction can slow down the simulations and critically fill the memory.
+
+
