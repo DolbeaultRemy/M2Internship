@@ -10,9 +10,8 @@ The evolution of the density matrix is computed thanks to the Lindblad master eq
 $$\partial_t \rho = -\frac{i}{\hbar} [H, \rho] +\mathcal{L}[\rho]$$
 
 where the Lindbladian is:
-$$
-\mathcal{L}[\rho] = \sum_{i, j} \Gamma_{i, j} \left( J_i \rho J_j^\dagger - \frac{1}{2} \left\{ J_i^\dagger J_j, \rho \right\} \right)
-$$
+
+$$ \mathcal{L}[\rho] = \sum_{i, j} \Gamma_{i, j} \left( J_i \rho J_j^\dagger - \frac{1}{2} \left\{ J_i^\dagger J_j, \rho \right\} \right)$$
 
 
 
