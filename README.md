@@ -51,3 +51,4 @@ The equations are converted in C for 2 reasons:
 Once compiled, the C functions are linked to the dispatcher C function, which will call all the subfunctions (or differential equations) in a single call from Julia. Indeed, calling each subfunction can slow down the simulations and critically fill the memory.
 
 
+
