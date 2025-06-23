@@ -1,6 +1,8 @@
 # M2Internship
 Julia simulations of N 2-level atoms on a lattice interacting via the electric and magnetic interaction.
 
+We simulate N interacting atoms of Erbium on an optical lattice thanks to the \textit{QuantumOptics.jl}, \textit{CollectiveSpins.jl}, \textit{QuantumCumulants.jl} libraries. The atoms of Erbium are prepared in the -7/-6 excited/ground state.
+
 The evolution of the density matrix is computed thanks to the Lindblad master equation:
 
 $$\partial_t \rho = -\frac{i}{\hbar} [H, \rho] +\mathcal{L}[\rho]$$
@@ -18,12 +20,18 @@ $$H_{\text{ElecDD}} = \sum_{i, j, i \neq j} \Omega_{i, j}\sigma_i^+ \sigma_j^-$$
 
 It realizes a spin-flip exchange between two atoms.
 
-
 The matrices $\Omega_{i, j}$ and $\Gamma_{i, j}$ (which is the collective decay matrix of the Lindbladian) are computed thanks to the \textit{CollectiveSpins.jl} library.
 
 
 ## Magnetic dipole-dipole interaction
 
-In our regime
+The effect of the magnetic dipole-dipole interaction is taken into account by adding the following Hamiltonian:
 
 $$H_{\text{MgtDD}} = \sum_{<i, j>} \Omega_{i, j}^{mgt} \sigma_z^i \sigma_z^j$$
+
+In the configuration of our experiment, this Hamiltonian can be rewritten as:
+
+$$ H_{\text{MgtDD}} = \sum_{<i, j>} (a n_{\uparrow \uparrow}^{ij} + b(n_{\uparrow \downarrow}^{ij} + n_{\downarrow \downarrow}^{ij}) + c n_{\downarrow \downarrow}^{ij})$$
+
+where  $[a, b, c] = [53, 42, 33]\SI{}{\hertz}$
+
