@@ -48,6 +48,6 @@ The equations are converted in C for 2 reasons:
 - C functions can be compiled in parallel thanks to the Make file
 - When a new Julia session is created, there is no trivial way of loading compiled functions, so the compilation has to be done again. With the C functions, we do not have this issue.
 
-  Once compiled, the C functions are linked to the dispatcher C function, which will call all the subfunctions (or differential equations) in a single call from Julia. Indeed, calling each subfunction can slow down the simulations and critically fill the memory.
+Once compiled, the C functions are linked to the dispatcher C function, which will call all the subfunctions (or differential equations) in a single call from Julia. Indeed, calling each subfunction can slow down the simulations and critically fill the memory.
 
 
