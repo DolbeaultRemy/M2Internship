@@ -38,7 +38,7 @@ where  [a, b, c] = [53, 42, 33] Hz.
 ## Running the simulations
 
 ### Installation
-Here are the needed packages to run the simulations. Some packages needs to be in a certain version. The _CollectiveSpins.jl_ is deprecated, so the modified _CollectiveSpins.jl_ package on this Github has to be used.
+To run the simulations, specific version of _QuantumCumulants.jl_ and _CollectiveSpins.jl_ are needed. Please run the Setup.jl file to install the correct dependencies. It will create a virtual environment (change the working directory in the Setup file if you are not already inside). The _CollectiveSpins.jl_ is deprecated, so the modified _CollectiveSpins.jl_ package on this Github has to be used. Download and unzip it, then go in you julia/dev directory and change the package by the one of this github.
 
 In order to compute the time evolution of a large number of atoms N, meanfield plus correlations (MPC) simulations can be performed. Indeed, the full resolution of the master equation is quickly impossible, as all the operators scale as $2^N$.
 
