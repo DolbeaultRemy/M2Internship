@@ -57,6 +57,6 @@ Once compiled, the C functions are linked to the dispatcher C function, which wi
 
 ### Run
 
-After running the Setup.jl file to load your virtual environment, run the ElecMgtDD_QC_CFunctions_Op.ipynb file. It will create a Cfunctions directory, where all the functions will be stored, a dispatcher that will call all the subfunction in a single call from Julia, and an objs.txt file that helps the compilation of the Cfunction. Then, run in a command shell the command _make -f MakefileMac -jNbrCores_, where Nbrcores is the number of cores you want to use to compile your functions. If your on windows, run _make -f MakefileWindows -jNbrCores_. Finally, run the QC_solve.ipynb to solve the differential equations.
+After running the Setup.jl file to load your virtual environment, run the ElecMgtDD_QC_CFunctions_Op.ipynb file. It will create a Cfunctions directory, where all the functions will be stored, a dispatcher that will call all the subfunction in a single call from Julia, and an objs.txt file that helps the compilation of the Cfunction. Then, run in a command shell the command _make -f MakefileMac -jNbrCores_, where Nbrcores is the number of cores you want to use to compile your functions. If your on windows, run _make -f MakefileWindows -jNbrCores_. Finally, run the QC_solve.ipynb to solve the differential equations. If you are using windows, change the name of the library in the ccall with "liballfuncs.dll".
 
 
