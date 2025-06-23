@@ -37,6 +37,9 @@ where  [a, b, c] = [53, 42, 33] Hz.
 
 ## Running the simulations
 
+### Needeed package
+Here are the needed packages to run the simulations. Some packages needs to be in a certain version. The _CollectiveSpins.jl_ is deprecated, so
+
 In order to compute the time evolution of a large number of atoms N, meanfield plus correlations (MPC) simulations can be performed. Indeed, the full resolution of the master equation is quickly impossible, as all the operators scale as $2^N$.
 
 The derivation of the (MPC) is done by the _QuantumCumulants.jl_ library, which derives the symbolic equations for the desired operators thanks to a cumulant expansion method, and automatically closes the set of differential equations.
