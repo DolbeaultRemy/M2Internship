@@ -1,6 +1,8 @@
 # M2Internship
 Julia simulations of N 2-level atoms on a lattice interacting via the electric and magnetic interaction.
 
+A lot of different system can be simulated with this method by changing the Hamiltonians and parameters of your system.
+
 We simulate N interacting atoms of Erbium on an optical lattice thanks to the _QuantumOptics.jl_, _CollectiveSpins.jl_, _QuantumCumulants.jl_ libraries. The atoms of Erbium are prepared in the -7/-6 excited/ground state.
 
 The evolution of the density matrix is computed thanks to the Lindblad master equation:
@@ -55,6 +57,6 @@ Once compiled, the C functions are linked to the dispatcher C function, which wi
 
 ### Run
 
-After running the Setup.jl file to load your virtual environment, run the ElecMgtDD_QC_CFunctions_Op.ipynb file. It will create a Cfunctions directory, where all the functions will be stored, a dispatcher that will call all the subfunction in a single call from Julia, and an objs.txt file that helps the compilation of the Cfunction. Then, run in a command shell the command _make -f MakefileMac -jNbrCores_, where Nbrcores is the number of cores you want to use to compile your functions. If your on windows, run _make -f MakefileWindows -jNbrCores_.
+After running the Setup.jl file to load your virtual environment, run the ElecMgtDD_QC_CFunctions_Op.ipynb file. It will create a Cfunctions directory, where all the functions will be stored, a dispatcher that will call all the subfunction in a single call from Julia, and an objs.txt file that helps the compilation of the Cfunction. Then, run in a command shell the command _make -f MakefileMac -jNbrCores_, where Nbrcores is the number of cores you want to use to compile your functions. If your on windows, run _make -f MakefileWindows -jNbrCores_. Finally, run the QC_solve.ipynb to solve the differential equations.
 
 
