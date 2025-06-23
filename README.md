@@ -1,7 +1,7 @@
 # M2Internship
 Julia simulations of N 2-level atoms on a lattice interacting via the electric and magnetic interaction.
 
-A lot of different system can be simulated with this method by changing the Hamiltonians and parameters of your system.
+Many different system can be simulated with this method by changing the Hamiltonians and parameters of the system.
 
 We simulate N interacting atoms of Erbium on an optical lattice thanks to the _QuantumOptics.jl_, _CollectiveSpins.jl_, _QuantumCumulants.jl_ libraries. The atoms of Erbium are prepared in the -7/-6 excited/ground state.
 
