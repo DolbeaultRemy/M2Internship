@@ -1,7 +1,7 @@
 # M2Internship
 Julia simulations of N 2-level atoms on a lattice interacting via the electric and magnetic interaction.
 
-We simulate N interacting atoms of Erbium on an optical lattice thanks to the \textit{QuantumOptics.jl}, \textit{CollectiveSpins.jl}, \textit{QuantumCumulants.jl} libraries. The atoms of Erbium are prepared in the -7/-6 excited/ground state.
+We simulate N interacting atoms of Erbium on an optical lattice thanks to the _QuantumOptics.jl_, \textit{CollectiveSpins.jl}, \textit{QuantumCumulants.jl} libraries. The atoms of Erbium are prepared in the -7/-6 excited/ground state.
 
 The evolution of the density matrix is computed thanks to the Lindblad master equation:
 
