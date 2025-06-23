@@ -17,15 +17,15 @@ OBJ = $(DISPATCHER_OBJ) $(CFUNCTIONS_OBJ)
 
 all: $(TARGET)
 
-# Compile dispatche
+# Compile the dispatcher
 dispatcher.o: dispatcher.c
 	$(CC) $(CFLAGS) $< -o $@
 
-# Compile tous les fichiers C dans Cfunctions/
+# Compile all the C files in Cfunctions/
 Cfunctions/%.o: Cfunctions/%.c
 	$(CC) $(CFLAGS) $< -o $@
 
-# Link final après compilation de tous les objets
+# Final link after the compilation of all the objects
 $(TARGET): $(OBJ)
 	$(CC) $(LDFLAGS) -o $@ @objs.txt
 
