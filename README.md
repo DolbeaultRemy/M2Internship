@@ -33,7 +33,7 @@ In the configuration of our experiment, this Hamiltonian can be rewritten as:
 
 $$ H_{\text{MgtDD}} = \sum_{<i, j>} (a n^{\uparrow \uparrow}\_{ij} + b(n^{\uparrow \downarrow}\_{ij} + n^{\downarrow \downarrow}\_{ij}) + c n^{\downarrow \downarrow}\_{ij})$$
 
-where  $[a, b, c] = [53, 42, 33] Hz$
+where  $[a, b, c] = [53, 42, 33]$Hz
 
 ## Running the simulations
 
