@@ -11,7 +11,7 @@ $$\partial_t \rho = -\frac{i}{\hbar} [H, \rho] +\mathcal{L}[\rho]$$
 
 where the Lindbladian is:
 
-$$\mathcal{L}[\rho] = \sum_{i, j} \Gamma_{i, j}(J_i \rho J_j^\dagger - \frac{1}{2} {J_i^\dagger J_j, \rho})$$
+$$\mathcal{L}[\rho] = \sum_{i, j} \Gamma_{i, j}(J_i \rho J_j^\dagger - \frac{1}{2} \{J_i^\dagger J_j, \rho})$$
 
 
 ## Electric dipole-dipole interaction:
