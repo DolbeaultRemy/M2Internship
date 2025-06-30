@@ -63,10 +63,11 @@ After running the Setup.jl file to load your virtual environment, run the ElecMg
 
 ### Supplementary instructions
 
-The most accessible example using symbolic computation is in the 1x2x4. In the M2Internship-main, you will find several codes, such as the one used to compute 75 atoms, where the number of C functions is to big to use the classical method. The differential equations have to be splitted in several functions, each of them calling 2000 differential equations. Several calls must then be made from Julia to solve the system.
-For the scanning algorithms (filling fraction, number of ES, $\theta_l$ dependencies), the different set of differential equations are automatically compiled, and then solved using the appropriate Julia code.
+The most accessible example using symbolic computation is in the 1x2x4. In the M2Internship-main, you will find several codes, such as the one used to compute 75 atoms, where the number of C functions is to big to use the classic method. The differential equations have to be splitted in several functions, each of them calling 2000 differential equations. Several calls must then be made from Julia to solve the system.
 
-You may of course be expected to change the names of the directories
+For the scanning algorithms (filling fraction, number of ES, $\theta_l$ dependencies), the different set of differential equations are automatically compiled for each desired value of the scanning parameter, and then solved using the appropriate Julia code.
+
+You may of course be expected to change the names of the directories.
 
 The report of the internship is added to the Github.
 
