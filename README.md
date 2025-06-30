@@ -38,6 +38,8 @@ $$ H_{\text{MgtDD}} = \sum_{<i, j>} (a n^{\uparrow \uparrow}\_{ij} + b(n^{\uparr
 
 where  [a, b, c] = [53, 42, 33] Hz.
 
+Be aware that __QuantumCumulants.jl__ doesn't like constants in the Hamiltonians, so remove them before calculating the meanfield plus correlations codes.
+
 ## Running the simulations
 
 ### Installation
