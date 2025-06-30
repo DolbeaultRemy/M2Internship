@@ -67,7 +67,6 @@ The most accessible example using symbolic computation is in the ElecMgtDD/1x2x4
 
 For the scanning algorithms (filling fraction, number of ES, $\theta_l$ dependencies), the different set of differential equations are automatically compiled for each desired value of the scanning parameter, and then solved using the appropriate Julia code.
 
-You may of course be expected to change t
 
 The report of the internship is added to the Github.
 
