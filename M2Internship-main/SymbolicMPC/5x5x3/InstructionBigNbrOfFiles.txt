@@ -1,0 +1,27 @@
+Get-ChildItem subdispatcher_*.c | ForEach-Object {
+    gcc -fPIC -c -Wall -O3 $_.Name -o ($_.BaseName + ".o")
+}
+
+
+
+# Définir la valeur maximale de i
+$N = 15  # Remplace 10 par le nombre souhaité
+
+# Créer le dossier de sortie s'il n'existe pas
+if (-not (Test-Path "libs")) {
+    New-Item -ItemType Directory -Path "libs"
+}
+
+# Boucle de 1 à N
+for ($i = 1; $i -le $N; $i++) {
+    # Formater le nom de fichier avec padding 3 chiffres : 001, 002, ...
+    $index = "{0:D3}" -f $i
+
+    # Construire la commande gcc
+    $outputDll = "libs/liballfuncs$i.dll"
+    $objListFile = "@subdispatchers_objs/subdispatcher_$index.txt"
+    $cmd = "gcc -shared -o $outputDll $objListFile"
+
+    Write-Host "Exécution : $cmd"
+    Invoke-Expression $cmd
+}

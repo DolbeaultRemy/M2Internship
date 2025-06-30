@@ -1,0 +1,8 @@
+[deps]
+CurveFit = "5a033b19-8c74-5913-a970-47c3779ef25c"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+QuantumCumulants = "35bcea6d-e19f-57db-af74-8011de6c7255"
+QuantumOpticsBase = "4f57444f-1401-5e15-980d-4471b28d5678"
+SymbolicUtils = "d1185830-fcd6-423d-90d6-eec64667417b"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"

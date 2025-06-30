@@ -1,0 +1,40 @@
+CC = gcc
+CFLAGS = -fPIC -c -Wall -O3
+LDFLAGS = -dynamiclib
+TARGET = liballfuncs.dylib
+
+# Répertoires
+CFUNCTIONS_DIR = Cfunctions
+OBJ_DIR = build
+
+# Sources
+DISPATCHER = dispatcher.c
+CFUNCTIONS = $(wildcard $(CFUNCTIONS_DIR)/*.c)
+
+# Objets
+DISPATCHER_OBJ = $(OBJ_DIR)/dispatcher.o
+CFUNCTIONS_OBJ = $(patsubst $(CFUNCTIONS_DIR)/%.c, $(OBJ_DIR)/%.o, $(CFUNCTIONS))
+OBJ = $(DISPATCHER_OBJ) $(CFUNCTIONS_OBJ)
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+# Crée le dossier build si nécessaire
+$(OBJ_DIR):
+	mkdir -p $(OBJ_DIR)
+
+# Compile dispatcher.c
+$(DISPATCHER_OBJ): $(DISPATCHER) | $(OBJ_DIR)
+	$(CC) $(CFLAGS) $< -o $@
+
+# Compile les fichiers dans Cfunctions/
+$(OBJ_DIR)/%.o: $(CFUNCTIONS_DIR)/%.c | $(OBJ_DIR)
+	$(CC) $(CFLAGS) $< -o $@
+
+# Link final
+$(TARGET): $(OBJ)
+	$(CC) $(LDFLAGS) -o $@ $^
+
+clean:
+	rm -rf $(OBJ_DIR) $(TARGET)
