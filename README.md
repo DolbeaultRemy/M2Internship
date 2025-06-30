@@ -63,11 +63,11 @@ After running the Setup.jl file to load your virtual environment, run the ElecMg
 
 ### Supplementary instructions
 
-The most accessible example using symbolic computation is in the ElecMgtDD/1x2x4, where you will also find the setup code. The simulations were run on Windows, so if you are using Mac/Linux, you might be expected to change the Makefile and the library names. In the M2Internship-main, you will find several codes, such as the one used to compute 75 atoms. For this code, the number of C functions is to big to use the classic method. The differential equations have to be splitted in several functions, each of them calling 2000 differential equations. Two Julia code take care of splitting the big C function and object.txt with all the differential equations into smaller objects, that can be handle more easily for the compilation. Several calls must then be made from Julia to solve the system. This is automatically made in the codes/Makefile.
+The most accessible example using symbolic computation is in the ElecMgtDD/1x2x4, where you will also find the setup code. The simulations were run on Windows, so if you are using Mac/Linux, you might be expected to change the Makefile and the library names, as well as the place of the directories. In the M2Internship-main, you will find several codes, such as the one used to compute 75 atoms. For this code, the number of C functions is to big to use the classic method. The differential equations have to be splitted in several functions, each of them calling 2000 differential equations. Two Julia code take care of splitting the big C function and object.txt with all the differential equations into smaller objects, that can be handle more easily for the compilation. Several calls must then be made from Julia to solve the system. This is automatically made in the codes/Makefile.
 
 For the scanning algorithms (filling fraction, number of ES, $\theta_l$ dependencies), the different set of differential equations are automatically compiled for each desired value of the scanning parameter, and then solved using the appropriate Julia code.
 
-You may of course be expected to change the names of the directories.
+You may of course be expected to change t
 
 The report of the internship is added to the Github.
 
