@@ -2,6 +2,7 @@
 
 Careful with the magnetic dipole-dipole interactions! -> Issue with the interactions between atoms along vertical axis, wrong coefficients. Corrected codes can be found in the RealMgdDD folder.
 
+The used julia version is 1.11.5
 
 # M2Internship
 Julia simulations of N 2-level atoms on a lattice interacting via the electric and magnetic interaction.
