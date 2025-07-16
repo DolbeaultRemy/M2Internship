@@ -1,4 +1,4 @@
-using Pkg
+import Pkg
 Pkg.activate(".") # Change with working directory if you are not already inside
 Pkg.add(PackageSpec(name="QuantumCumulants", version="0.3.8"))
 Pkg.add(PackageSpec(name="JLD2", version="0.5.13"))
